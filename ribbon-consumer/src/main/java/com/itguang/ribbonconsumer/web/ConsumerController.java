@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import javax.print.DocFlavor;
-
 /**
  * @author itguang
  * @create 2017-12-16 14:15
@@ -15,7 +13,7 @@ import javax.print.DocFlavor;
 @RestController
 public class ConsumerController {
 
-
+    //这个 hello-service 是我们在服务提供者配置的 spring.application.name的值
     String helloServiceUrl = "http://hello-service/hello";
 
 

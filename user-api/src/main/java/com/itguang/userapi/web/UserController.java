@@ -22,29 +22,12 @@ public class UserController {
 
     @Autowired
     private DiscoveryClient client;
-   @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello(){
 
-       ServiceInstance instance = client.getLocalServiceInstance();
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
 
-
-//       List<String> services = client.getServices();
-//       for (String serviceId :services){
-//           List<ServiceInstance> instances = client.getInstances(serviceId);
-//           for(ServiceInstance instance:instances){
-//               log.info("/hello,host={},service_id={}",instance.getHost(),instance.getServiceId());
-//           }
-//
-//
-//       }
-
-
-
-       return "hello world from hello-service1";
-
+        ServiceInstance instance = client.getLocalServiceInstance();
+        log.info("host={},service_id={},port={}", instance.getHost(), instance.getServiceId(), instance.getPort());
+        return "hello world from user_api1";
     }
-
-
-
-
 }

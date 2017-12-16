@@ -18,15 +18,15 @@ public class UserController {
 
     @Autowired
     private DiscoveryClient client;
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello(){
 
-//        ServiceInstance instance = client.getLocalServiceInstance();
-        return "hello world from hello-service2";
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String hello() {
+
+        ServiceInstance instance = client.getLocalServiceInstance();
+        log.info("host={},service_id={},port={}", instance.getHost(), instance.getServiceId(), instance.getPort());
+        return "hello world from user-api2";
 
     }
-
-
 
 
 }
