@@ -313,7 +313,7 @@ getForObject 和 getForEntity 用法几乎相同,指示返回值返回的是 响
 对与其它请求方式,由于不常使用,所以这里就不再讲述.
 
 
-
+> 源码地址: https://github.com/itguang/springcloud-learn/tree/master/resttemplate-test
 
 
 
